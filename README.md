@@ -1,5 +1,7 @@
 # iRT Coupled PINN
 
+This is a physics-informed neural network that models tumor and immune response to radiotherapy combined with immunotherapy. The network solves a coupled system of five ODEs describing irradiated tumor, non-irradiated tumors damaged tumor, and circulating lymphocyte populations over a 1window of 100 days.
+
 ## Initial Conditions
 
 The PINN declares the initial conditions for the 5 variables below. These values were developed with the idea that one single dose was administered previously, but I am working to develop a fractionation schedule, which would change the initial conditions of the damaged tumors, irradiated tumors, and the lymphocytes. For the integration of the primary immune response present in the secondary immune response equation, I created a new differential equation in order to solve for the desired value.
