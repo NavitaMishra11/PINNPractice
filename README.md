@@ -1,1 +1,2 @@
-# PINNPractice
+# iRT Coupled PINN
+
