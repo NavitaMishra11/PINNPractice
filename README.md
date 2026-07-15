@@ -27,3 +27,6 @@ The physics informed neural network is a fully connected network mapping time to
 
 For the collocation of points, I used 1000 values of t uniformly spaced on [0,100], with requires_grad = True, so that the d/dt can be taken by autograd. For the training loop, there are 20,000 epochs, or training rounds, with a learning rate of $10^{-3}$. Each epoch performs a forward pass, then computes the five derivatives, evaluates the initial condition loss in a separate forward pass, and takes a single gradient step. During these epochs, the total loss is calculated, and over time, that loss gets smaller and smaller, demonstrating that the network is actually learning based on the governing equations.
 
+### Current Files
+
+The files in the repository show my gradual journey to developing the 5 ODE coupled PINN. I started off with just the one Damaged Tumors equation and then slowly added the rest of the tumor-immune dynamic equations in order to develop the full PINN. Next, I am working on how to incorporate a fractionstion schedule into my PINN.
